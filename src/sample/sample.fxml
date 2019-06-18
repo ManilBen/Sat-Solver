@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="581.0" prefWidth="904.0">
+         <children>
+            <ChoiceBox fx:id="fileChoice" onAction="#handleComboBoxAction" layoutX="53.0" layoutY="55.0" prefHeight="25.0" prefWidth="166.0" />
+
+            <Label layoutX="53.0" layoutY="30.0" text="Choose a file" />
+            <LineChart layoutX="440.0" layoutY="30.0" prefHeight="259.0" prefWidth="423.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <BarChart layoutX="439.0" layoutY="288.0" prefHeight="298.0" prefWidth="451.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <ChoiceBox fx:id="instanceChoice" onAction="#handleComboBoxAction" layoutX="241.0" layoutY="55.0" prefHeight="25.0" prefWidth="44.0" />
+            <Separator layoutX="310.0" layoutY="98.0" orientation="VERTICAL" prefHeight="524.0" prefWidth="4.0" />
+            <TextArea  fx:id="instanceArea" layoutX="53.0" layoutY="129.0" prefHeight="338.0" prefWidth="234.0" />
+            <Label  layoutX="53.0" layoutY="484.0" text="Number of literals :" />
+            <TextField layoutX="167.0" layoutY="480.0" prefHeight="25.0" prefWidth="32.0" />
+            <Label layoutX="52.0" layoutY="514.0" text="Number of clauses :" />
+            <TextField layoutX="167.0" layoutY="510.0" prefHeight="25.0" prefWidth="32.0" />
+            <Label  layoutX="243.0" layoutY="30.0" text="Instance" />
+            <ChoiceBox fx:id="parametre" layoutX="335.0" layoutY="55.0" prefHeight="25.0" prefWidth="105.0" />
+            <Label layoutX="335.0" layoutY="30.0" text="Parametre" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
